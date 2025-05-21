@@ -82,5 +82,6 @@ Avant de [rapporter un bogue](https://bugs.galette.eu/projects/galette) ou [d'ex
 **Merci de ne pas faire de demandes de support !**
 
 * Mastodon : [@galette@framapiaf.org](https://framapiaf.org/@galette)
-* Twitter : [@galette_soft](https://twitter.com/galette_soft) (Twitter est-il toujours vivant ?)
+* Bluesky : [@galettesoft.bsky.social](https://bsky.app/profile/galettesoft.bsky.social)
+* ~~Twitter : [@galette_soft](https://twitter.com/galette_soft)~~
 * Facebook : [Galette](https://www.facebook.com/galettesoft)
