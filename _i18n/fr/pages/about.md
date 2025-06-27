@@ -47,6 +47,8 @@ Courant 2012, le code source du projet passe à Git ; l'hébergement des dépôt
 
 Début 2017, les listes de diffusion passent également chez Tuxfamily, Gna ayant annoncé la fin de leurs bons et loyaux services.
 
+Depuis 2024, [Tuxfamily s'éteint doucement](https://forum.tuxfamily.org/post/3396/) le projet Galette a donc déplacé tous les services vers d'autres fournisseurs. Merci TuxFamily pour toutes ces années d'hébergement !
+
 ### Mail Originel
 
 Ceci est le **mail originel** annonçant la création de Galette. Depuis, la liste Code de l'[ALDIL](https://www.aldil.org) a disparu, ses archives aussi.
@@ -70,32 +72,13 @@ Sachez qu'au final, Deelight (Développeur : Celui qui a raison) a choisi Galett
 
 ## Outils utilisés
 
-La gestion d'un projet comme Galette requiert qu'un certain nombre de solutions techniques soient mises en oeuvre : [moyens de communication]({% tl contact %}), [hébergement du code source](https://git.tuxfamily.org/galette/), [gestion des tickets]({{ site.galette.tracker_url }}), ...). Voici ce qui est utilisé :
-
-* [code source](https://git.tuxfamily.org/galette/) : [Git](https://git-scm.com/), hébergé chez [TuxFamily](https://tuxfamily.org),
-* site web : généré par [Jekyll](https://jekyllrb.com)[^1], hébergé chez TuxFamily,
-* [gestionnaire de tickets]({{ site.galette.tracker_url }}) : [Redmine](https://redmine.org)[^2], hébergé sur un serveur dédié,
-* [démo](https://demo.galette.eu) : [Galette](https://galette.eu), hébergée sur un serveur dédié,
-* [listes de diffusion]({% tl contact %}#listes-de-discussion) : [VHFFS](https://vhffs.org)[^3], fournies par TuxFamily,
-* [système de vote]({{ site.galette.vote_url }}) : [Fider](https://fider.io), hébergé sur Fider,
-* [documentation]({{ site.galette.doc_url }}/{{ site.lang }}/master) : générée par [Sphinx](https://www.sphinx-doc.org)[^4], hébergée chez [ReadTheDocs](https://rtfd.org),
-* [traductions]({{ site.galette.trad_url }})[^5] et [traduction documentation]({{ site.galette.trad_url }})[^6] : [Weblate](https://weblate.org), hébergé chez Weblate.
+* [moyens de communication]({% tl contact %}),
+* [code source](https://github.com/galette/galette/) : [Git](https://git-scm.com/),
+* site web : généré par [Jekyll](https://jekyllrb.com)[^1],
+* [gestionnaire de tickets]({{ site.galette.tracker_url }}) : [Redmine](https://redmine.org),
+* [démo](https://demo.galette.eu) : [Galette](https://galette.eu),
+* [listes de diffusion]({% tl contact %}#listes-de-discussion) : [Mailman](https://list.org),
+* [système de vote]({{ site.galette.vote_url }}) : [Fider](https://fider.io),
+* [documentation]({{ site.galette.doc_url }}/{{ site.lang }}/master) : générée par [Sphinx](https://www.sphinx-doc.org), hébergée chez [ReadTheDocs](https://rtfd.org),
+* [traductions]({{ site.galette.trad_url }}) et [traduction documentation]({{ site.galette.trad_url }}) : [Weblate](https://weblate.org).
 * Johan, hébergé chez lui :p
-
-Bien que ce ne soit pas un outil libre, [Galette possède des miroirs officiels sur GitHub](https://github.com/galette), pour plusieurs raisons :
-
-* l'espace est limité chez TuxFamily. En utilisant GitHub pour les branches de développement, on évite ainsi de grossir inutilement le dépôt Git principal,
-* beaucoup de gens ont un compte GitHub, très peu un compte TuxFamily,
-* proposer une modification est aisé pour les utilisateurs,
-* le système de revue est pratique,
-* pas besoin de gérer un service supplémentaire (la liste est déjà longue),
-* services d'intégration continue (les tests sont lancés à chaque commit),
-* l'interface web aide à chercher/naviguer dans le code, c'est moins évident avec le CGIT du dépôt officiel,
-* il n'est pas possible de créer des hooks git chez TuxFamily, or c'est utilisé pour mettre à jour les traductions et la documentation ainsi que pour lancer les tests :/
-
-[^1]: depuis 2020. Le site était propulsé par [Dotclear](https://dotclear.org) entre 2012 et 2020, et par [dokuwiki](https://dokuwiki.org) avant 2012
-[^2]: depuis 2012. Avant cela, le système proposé par Gna! était utilisé
-[^3]: depuis 2017. Avant cela, les listes étaient gérées par [Mailman](https://list.org/) chez Gna! jusqu'à la fermeture de leurs services
-[^4]: depuis 2012. Tout était sur le site web avant cette date
-[^5]: depuis 2019. Les traductions étaient gérées entièrement en local auparavant
-[^6]: depuis 2019. La documentation n'était disponible qu'en français avant cela
