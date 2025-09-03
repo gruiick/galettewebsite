@@ -15,6 +15,7 @@
 # along with Foobar.  If not, see https://www.gnu.org/licenses/
 */
 @charset "utf-8";
+@use 'sass:color';
 
 @font-face {
     font-family: 'PtSans';
@@ -64,10 +65,10 @@ $galette-orange:    #ffb619 !default;
 $galette-grey:      #e6e6e6 !default;
 $action-color:      #279ac4 !default;
 
-$galette-light-orange: lighten($galette-orange, 20%) !default;
-$galette-dark-orange:  darken($galette-orange, 15%) !default;
+$galette-light-orange: color.adjust($galette-orange, $lightness: 20%) !default;
+$galette-dark-orange:  color.adjust($galette-orange, $lightness: -15%) !default;
 $galette-blue:      #0486b5 !default;
-$galette-light-grey:   lighten($text-color, 20%) !default;
+$galette-light-grey:   color.adjust($text-color, $lightness: 20%) !default;
 
 $galette-max-width: 1024px;
 $content-width:    800px !default;
