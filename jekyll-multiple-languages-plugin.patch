@@ -1,0 +1,25 @@
+diff -up /home/trasher/gems/gems/jekyll-multiple-languages-plugin-1.8.0/lib/jekyll-multiple-languages-plugin.rb.patch /home/trasher/gems/gems/jekyll-multiple-languages-plugin-1.8.0/lib/jekyll-multiple-languages-plugin.rb
+--- /home/trasher/gems/gems/jekyll-multiple-languages-plugin-1.8.0/lib/jekyll-multiple-languages-plugin.rb.patch	2025-09-03 07:45:12.541826071 +0200
++++ /home/trasher/gems/gems/jekyll-multiple-languages-plugin-1.8.0/lib/jekyll-multiple-languages-plugin.rb	2025-09-03 08:14:42.889624995 +0200
+@@ -536,7 +536,7 @@ module Jekyll
+       namespace    = key[0]
+       lang         = key[1] || site.config[        'lang']
+       default_lang =           site.config['default_lang']
+-      baseurl      =           site.baseurl
++      baseurl      =           site.config['baseurl_root']
+       pages        =           site.pages
+       url          = "";
+       
+@@ -629,8 +629,10 @@ class TranslatedString < String
+   # initialize
+   #======================================
+   def initialize(*several_variants, key)
+-    super(*several_variants)
+-    @key = key
++    unless several_variants.include?(nil)
++      super(*several_variants)
++      @key = key
++    end
+   end
+ 
+   def key
