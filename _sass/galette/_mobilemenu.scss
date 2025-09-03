@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Foobar.  If not, see https://www.gnu.org/licenses/
 */
-
+@use "../variables";
 
 /* Button styling */
 .menu-toggle {
@@ -31,7 +31,7 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  fill: $galette-orange;
+  fill: variables.$galette-orange;
 }
 
 /*
@@ -46,7 +46,7 @@
   width: 100%;
   z-index: 999;
   font-size: 1.2em;
-  background: $text-color;
+  background: variables.$text-color;
 }
 
 .main-menu ul {
@@ -60,10 +60,10 @@
 aside#sidebar .main-menu li a {
   color: #fff;
   padding: 5vw 15vw;
-  border-bottom: 1px solid $galette-dark-orange;
+  border-bottom: 1px solid variables.$galette-dark-orange;
 
   &:hover {
-    color: $galette-orange;
+    color: variables.$galette-orange;
   }
 }
 
@@ -149,7 +149,7 @@ aside#sidebar .main-menu li a {
 }
 
 
-@media screen and (min-width: $galette-large) {
+@media screen and (min-width: variables.$galette-large) {
     .menu-toggle,
     .main-menu .menu-close {
         display: none;
@@ -166,12 +166,12 @@ aside#sidebar .main-menu li a {
     }
 
     aside#sidebar .main-menu li a {
-        color: $text-color;
+        color: variables.$text-color;
         padding: .2em .3em;
         border-bottom: none;
 
         &:hover {
-            color: $galette-blue;
+            color: variables.$galette-blue;
         }
 
     }

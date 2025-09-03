@@ -14,10 +14,11 @@
 # You should have received a copy of the GNU General Public License
 # along with Foobar.  If not, see https://www.gnu.org/licenses/
 */
+@use "../variables";
 
 /** Homepage style */
 
-@media screen and (min-width: $galette-large) {
+@media screen and (min-width: variables.$galette-large) {
     #home {
         figure {
             margin: .3em;

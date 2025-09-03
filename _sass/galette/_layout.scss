@@ -14,6 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Foobar.  If not, see https://www.gnu.org/licenses/
 */
+@use "../variables";
 
 /** main header */
 $galette-header-h: 100px !default;
@@ -31,7 +32,7 @@ body > header:first-child {
     margin: 0;
 
     a {
-      color: $light-text-color;;
+      color: variables.$light-text-color;
       text-decoration: none;
       display: inline-block;
       width: 208px;
@@ -45,7 +46,7 @@ body > header:first-child {
 
 /** Page contents */
 body > section.wrapper {
-    max-width: $galette-max-width;
+    max-width: variables.$galette-max-width;
     margin: 0 auto;
     background: #fff;
     padding: 2em;
@@ -61,7 +62,7 @@ body > section.wrapper {
     header {
         h1 {
             display: inline-block;
-            border-bottom: 1px solid $galette-orange;
+            border-bottom: 1px solid variables.$galette-orange;
             line-height: 1.2em;
             margin: .1em 0;
         }
@@ -96,13 +97,13 @@ section#content {
         padding: .1em .2em;
 
         &.active {
-            border-bottom: 1px solid $galette-orange;
+            border-bottom: 1px solid variables.$galette-orange;
         }
 
         &:hover {
             text-decoration: none;
-            color: $light-text-color;
-            background: $galette-blue;
+            color: variables.$light-text-color;
+            background: variables.$galette-blue;
             border-bottom: 1px solid transparent;
         }
 
@@ -121,7 +122,7 @@ section#content {
       border: 1px solid #98dbcc;
       padding: .5em 1em;
       background: #f6f5f4;
-      color: $background-color;
+      color: variables.$background-color;
 
       &:hover {
         background: #fff;
@@ -152,11 +153,11 @@ section#content {
 /** Navigate beetween posts */
 .posts-navigation {
     margin-top: 1em;
-    border-top: 1px solid $galette-orange;
+    border-top: 1px solid variables.$galette-orange;
     text-align: center;
 
     a {
-        color: $galette-light-grey;
+        color: variables.$galette-light-grey;
     }
 }
 
@@ -164,18 +165,18 @@ aside#sidebar {
     grid-column: 2;
     grid-row: 2;
     background: #fff;
-    border-top: 1px solid $galette-orange;
+    border-top: 1px solid variables.$galette-orange;
 
   h2 {
     margin: 0;
     text-shadow: 1px 1px 1px rgba(242, 161, 4, 0.5);
 
-    border-bottom: 1px $background-color dotted;
-    color: $background-color;
+    border-bottom: 1px variables.$background-color dotted;
+    color: variables.$background-color;
   }
 
   h3 {
-    color: $text-color;
+    color: variables.$text-color;
     margin: 1em 0 .5em;
   }
 
@@ -190,20 +191,20 @@ aside#sidebar {
     margin: 0;
 
     a {
-      color: $text-color;
+      color: variables.$text-color;
       display: block;
       text-decoration: none;
       padding: .2em .3em;
 
       &:hover, &:focus, &:active {
-        color: $action-color;
+        color: variables.$action-color;
         background: rgba(0, 0, 0, 0.1);
       }
     }
   }
 
   .main-menu li.active a {
-    border-bottom: 1px solid $galette-orange;
+    border-bottom: 1px solid variables.$galette-orange;
   }
 }
 
@@ -227,7 +228,7 @@ body > footer {
   text-align: center;
 }
 
-@media screen and (min-width: $galette-large) {
+@media screen and (min-width: variables.$galette-large) {
     $galette-left-pcontent: 0 1em !default;
     body > section.wrapper {
         position: relative;

@@ -14,6 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Foobar.  If not, see https://www.gnu.org/licenses/
 */
+@use "../variables";
 
 * {
     box-sizing: border-box;
@@ -22,10 +23,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: $background-color url(img/bg.png) top left no-repeat;
+  background: variables.$background-color url(img/bg.png) top left no-repeat;
 
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
+  font: variables.$base-font-weight #{variables.$base-font-size}/#{variables.$base-line-height} variables.$base-font-family;
+  color: variables.$text-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -36,11 +37,11 @@ body {
 
 section#content {
     h2, h3, h4, h5, h6 {
-        border-bottom: 1px dotted $galette-blue;
+        border-bottom: 1px dotted variables.$galette-blue;
         display: inline-block;
 
         a {
-            color: $text-color;
+            color: variables.$text-color;
 
             &:hover {
                 color: black;
@@ -50,7 +51,7 @@ section#content {
     }
 
     .home .post-content h2:first-of-type {
-        color: $galette-blue;
+        color: variables.$galette-blue;
         border-bottom: none;
     }
 }
@@ -60,7 +61,7 @@ img {
 }
 
 a {
-  color: $action-color;
+  color: variables.$action-color;
   text-decoration: none;
   cursor: hand;
 
@@ -87,7 +88,7 @@ pre {
 }
 
 code, kbd, samp {
-    font-size: $small-font-size;
+    font-size: variables.$small-font-size;
     background: rgba(0, 0, 0, .1);
     padding: .1em .2em;
 }
@@ -105,35 +106,35 @@ code, kbd, samp {
 }
 
 .tag {
-    font-size: $small-font-size;
+    font-size: variables.$small-font-size;
     display: inline-block;
     padding: .2em .5em;
-    background-color: $galette-light-grey;
-    color: $light-text-color;
+    background-color: variables.$galette-light-grey;
+    color: variables.$light-text-color;
 
     &.release {
-        background-color: $release-color;
+        background-color: variables.$release-color;
     }
 
     &.rc {
-        background-color: $rc-color;
+        background-color: variables.$rc-color;
     }
 
     &.sponsored {
-        background-color: $sponsored-color;
+        background-color: variables.$sponsored-color;
     }
 }
 
 svg.orange {
-    fill: $galette-orange;
+    fill: variables.$galette-orange;
 
     &:hover {
-        fill: $galette-dark-orange;
+        fill: variables.$galette-dark-orange;
     }
 }
 
 a:hover svg.orange {
-    fill: $galette-dark-orange;
+    fill: variables.$galette-dark-orange;
 }
 
 .social-media-list a {
@@ -165,7 +166,7 @@ aside#sidebar .rss {
 }
 
 .footnotes {
-    border-top: 1px solid $galette-grey;
+    border-top: 1px solid variables.$galette-grey;
     background: rgba(0, 0, 0, .1);
     padding: .5em;
 
@@ -192,7 +193,7 @@ aside#galette {
     margin:0;
     padding:0;
     list-style:none;
-    background:$galette-orange;
+    background:variables.$galette-orange;
     background: linear_gradient(#77B9FB, #3782CD);
     border-radius:5px;
     box-shadow: inset rgba(#fff, 0.45) 0 1px 0, inset rgba(#000, 0.2) 0 -1px 0;
@@ -201,11 +202,11 @@ aside#galette {
 
     li {
         flex: 1;
-        border-right:1px solid $galette-dark-orange;
-        border-left:1px solid $galette-light-orange;
+        border-right:1px solid variables.$galette-dark-orange;
+        border-left:1px solid variables.$galette-light-orange;
 
       &:hover {
-        background-color: $galette-dark-orange;
+        background-color: variables.$galette-dark-orange;
       }
     }
 
@@ -231,14 +232,14 @@ aside#galette {
 
       strong {
           display: block;
-        font-size: $big-font-size;
+        font-size: variables.$big-font-size;
         -webkit-font-smoothing:antialiased;
       }
     }
   }
 }
 
-@media screen and (min-width: $galette-large) {
+@media screen and (min-width: variables.$galette-large) {
     aside#galette {
         flex: unset;
         width: auto;
