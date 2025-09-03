@@ -42,3 +42,7 @@ end
 gem "webrick", "~> 1.7"
 
 gem "rmagick", "~> 4.2"
+
+gem "observer", "~> 0.1.2"
+
+gem "logger", "~> 1.7"
